@@ -39,14 +39,14 @@ This application was built as part of my application to MSTWorld.com, this is th
 
 Create a simple user interface that displays the data in a basic table layout.
 
-The data is being sent on a socket event `data-update` here: `https://mst-full-stack-dev-test.herokuapp.com/`
+The data is being sent on a socket event `data-update` here: `wss://mst-full-stack-dev-test.herokuapp.com/`
 
 - Short time span: ~ 1 week
 - Your UI should update in real-time as data is received 
 - Use of UI frameworks and libraries
 - Sorting / Searching / Filtering
 - Scalability
-- Consider future functionality
+- Consider future functionality (give chatgpt the data and talk to it?)
 
 Example of data object emitted:
 
@@ -56,6 +56,8 @@ Example of data object emitted:
     "Match": 11,
     "First": "Graeme",
     "Last": "Storm",
+    "TVName": "Storm",
+    "Sex": "M",
     "Nationality": "ENG",
     "SOD": null,
     "Score": 9,
@@ -118,10 +120,8 @@ Example of data object emitted:
     "CalculatedRankInteger": 1103,
     "position": 128,
     "UniquePosition": 9999,
-    "TVName": "Storm",
     "Eastern": null,
     "Handicap": 0,
-    "SortPriority": null,
-    "Sex": "M"
+    "SortPriority": null
 }
 ```
