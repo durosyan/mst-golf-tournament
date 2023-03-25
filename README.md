@@ -35,18 +35,18 @@ This application was built as part of my application to MSTWorld.com, this is th
 
 ---
 
-## Requirements
+## Customer Requirements
 
 Create a simple user interface that displays the data in a basic table layout.
 
 The data is being sent on a socket event `data-update` here: `wss://mst-full-stack-dev-test.herokuapp.com/`
 
-- Short time span: ~ 1 week
-- Your UI should update in real-time as data is received 
-- Use of UI frameworks and libraries
-- Sorting / Searching / Filtering
-- Scalability
-- Consider future functionality (give chatgpt the data and talk to it?)
+- Short time span,
+- Your UI should update in real-time as data is received,
+- Use of UI frameworks and libraries,
+- Sorting / Searching / Filtering,
+- Scalability,
+- Consider future functionality (give chatgpt the data and talk to it?).
 
 Example of data object emitted:
 
