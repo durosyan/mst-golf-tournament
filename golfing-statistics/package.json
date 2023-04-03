@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "ng serve",
     "ng": "ng",
-    "start": "npm run dev",
+    "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch",
     "test": "ng test"
@@ -35,8 +35,8 @@
     "@angular/cli": "~15.0.0",
     "@angular/compiler-cli": "^15.0.0",
     "@nrwl/vite": "^15.7.0",
-    "nx": "^15.7.0",
     "jsdom": "^20.0.0",
+    "nx": "^15.7.0",
     "typescript": "~4.8.4",
     "vite": "^4.0.3",
     "vitest": "^0.25.8"

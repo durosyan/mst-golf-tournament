@@ -2,6 +2,13 @@
 
 This project was generated with [Analog](https://analogjs.org), the fullstack meta-framework for Angular.
 
+I was going to use the angular cli, but I decided to use this meta-framework instead,  
+I'm not sure if I'm going to use it for my other angular applications, but I'm going to keep it in mind for the future.
+
+Looks like yarn is preferred, ty microsoft.
+
+---
+
 ## Setup
 
 Run `yarn` to install the application dependencies.
@@ -27,15 +34,5 @@ Run `yarn test` to run unit tests with [Vitest](https://vitest.dev).
 
 ---
 
-Oops, you found a bug in the documentation? Please [open an issue]()
-
----
-
-I wrote this little gem for MST-World who wanted me to make an angular application for them, I decided to figure out how to use EsBuild to build the application.
-And I also decided to use the analogjs meta-framework for angular to make it easier to build the application.
-
-I'm not sure if I'm going to use this meta-framework for my other angular applications, but I'm going to keep it in mind for the future.
-
-I will keep notes on my progress here.
-
----
+Oops, you found a bug in the documentation? Please open an issue.  
+But first, please check if the issue is already reported, also, this is only a test, so don't worry about it.
