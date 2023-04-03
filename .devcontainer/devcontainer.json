@@ -19,5 +19,5 @@
 	"forwardPorts": [
 		4200
 	],
-	"postCreateCommand": "yarn install"
+	"postCreateCommand": "cd mst-golf-tournament && yarn install"
 }
