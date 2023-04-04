@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
       </a>
     </div>
 
-    <h1>Vite + Angular</h1>
+    <h1>MST Golfing Statistics</h1>
 
     <div class="card">
       <button type="button" (click)="increment()">Count {{ count }}</button>

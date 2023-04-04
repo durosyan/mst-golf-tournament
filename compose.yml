@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  my-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - golf-stats:/app
+
+volumes:
+  golf-stats:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./golfing-statistics
+      o: bind
