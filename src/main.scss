@@ -31,3 +31,7 @@ $mst-golfing-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($mst-golfing-theme);
 
+body {
+  font-family: Roboto;
+}
+
