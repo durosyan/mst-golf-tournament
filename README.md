@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
-![build](https://github.com/durosyan/mst-golf-tournament/actions/workflows/main.yml/badge.svg)
+![build](https://github.com/durosyan/mst-golf-tournament/actions/workflows/node.js.yml/badge.svg)
 
 ---
 
