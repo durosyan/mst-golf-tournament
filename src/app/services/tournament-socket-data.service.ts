@@ -1,17 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Socket } from 'ngx-socket-io';
-import { Document } from '../models/document.model';
+import { Golfer } from '../models/document.model';
+import { Observable } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class TournamentSocketDataService {
-  currentDocument = this.socket.fromEvent<Document>('data-update');
+  private DataObserver: Observable<Golfer>
 
-  constructor(
-    private socket: Socket
-  ) {}
+  constructor(private socket: Socket) {
+    this.DataObserver = this.socket.fromEvent('data-update');
+  }
 
-  getDocument(id: string) {
+  subscribe() {
+    this.DataObserver.subscribe({
+      next(update) { console.log(update) }
+    })
   }
 }

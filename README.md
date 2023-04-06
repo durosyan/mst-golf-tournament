@@ -41,87 +41,45 @@ Create a simple user interface that displays the data in a basic table layout.
 
 The data is being sent on a socket event `data-update` here: `wss://mst-full-stack-dev-test.herokuapp.com/`
 
-- Short time span,
 - Your UI should update in real-time as data is received,
 - Use of UI frameworks and libraries,
 - Sorting / Searching / Filtering,
 - Scalability,
 - Consider future functionality (give chatgpt the data and talk to it?).
 
-Example of data object emitted:
+---
 
-```json
-{
-    "MSTID": 30226,
-    "Match": 11,
-    "First": "Graeme",
-    "Last": "Storm",
-    "TVName": "Storm",
-    "Sex": "M",
-    "Nationality": "ENG",
-    "SOD": null,
-    "Score": 9,
-    "Today": 9,
-    "Hole1Strokes": 5,
-    "Hole1STP": 1,
-    "Hole2Strokes": 5,
-    "Hole2STP": 0,
-    "Hole3Strokes": 3,
-    "Hole3STP": 0,
-    "Hole4Strokes": 4,
-    "Hole4STP": 0,
-    "Hole5Strokes": 4,
-    "Hole5STP": 0,
-    "Hole6Strokes": 4,
-    "Hole6STP": 0,
-    "Hole7Strokes": 3,
-    "Hole7STP": 0,
-    "Hole8Strokes": 4,
-    "Hole8STP": 0,
-    "Hole9Strokes": 6,
-    "Hole9STP": 1,
-    "OutStrokes": 38,
-    "OutSTP": 2,
-    "Hole10Strokes": 3,
-    "Hole10STP": 0,
-    "Hole11Strokes": 5,
-    "Hole11STP": 0,
-    "Hole12Strokes": 4,
-    "Hole12STP": 0,
-    "Hole13Strokes": 5,
-    "Hole13STP": 2,
-    "Hole14Strokes": 5,
-    "Hole14STP": 1,
-    "Hole15Strokes": 5,
-    "Hole15STP": 1,
-    "Hole16Strokes": 5,
-    "Hole16STP": 1,
-    "Hole17Strokes": 3,
-    "Hole17STP": 0,
-    "Hole18Strokes": 7,
-    "Hole18STP": 2,
-    "InStrokes": 42,
-    "InSTP": 7,
-    "TotalStrokes": 80,
-    "TotalSTP": 9,
-    "tournamentID": 2020009,
-    "round": 1,
-    "orderInMatch": 3,
-    "lastUpdated": "55:56.7",
-    "status": 1,
-    "leaderboardID": 184592,
-    "teeStart": 1,
-    "teeTime": "50:00.0",
-    "holesPlayed": 18,
-    "course": 1,
-    "matchID": 99788,
-    "Amature": 0,
-    "isTeam": 0,
-    "CalculatedRankInteger": 1103,
-    "position": 128,
-    "UniquePosition": 9999,
-    "Eastern": null,
-    "Handicap": 0,
-    "SortPriority": null
-}
-```
+## UI Framework
+
+I used `@angular/material` for the table and sorting functions
+
+---
+
+## Country Flags
+
+I might've started to convert the country codes into display their relevant flags,
+but I'm not sure what ISO standard the country codes are (probs olympic) but it would take some work to generate this data (probably be able to prompt gpt to do this though using the link below as context).
+
+I got the flag svgs and the data from:
+- https://www.iso.org/iso-3166-country-codes.html
+- https://www.iso.org/obp/ui/#search
+- https://flagpedia.net/download/api
+
+---
+
+## Data Model
+
+I've made a typescript interface for the object recieved in [document.model.ts](src/app/models/document.model.ts)
+
+---
+
+## Scalability & Future
+
+Since this has no server rendering and only listens to the socket, it would be perfectly feasable to horizontally scale this app.
+This could be done using any clud providers edge computing functionality like AWS Cloudfront or Cloudflare
+
+I've currently deployed this to github sites since it's the easiest for an MVP but this would not be hard to change.
+
+In the future it should be possible to load the flags and display that. also we might want to 
+
+---
