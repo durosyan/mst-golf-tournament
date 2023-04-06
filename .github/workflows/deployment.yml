@@ -60,7 +60,7 @@ jobs:
     - name: Upload dist
       uses: actions/upload-pages-artifact@v1
       with:
-        path: dist
+        path: dist/mst-golfing
         retention-days: 1
 
   # Deployment job
