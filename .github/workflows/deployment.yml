@@ -55,7 +55,7 @@ jobs:
       run: yarn --frozen-lockfile
 
     - name: Build
-      run: yarn run build
+      run: yarn run build --baseHref=https://durosyan.github.io/mst-golf-tournament/
 
     - name: Upload dist
       uses: actions/upload-pages-artifact@v1
