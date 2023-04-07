@@ -1,7 +1,8 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatTable } from '@angular/material/table';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
-import { Golfer, GolfersKeys } from '../models/document.model';
+import { Golfer, GolfersColumns } from '../models/document.model';
 import { TournamentSocketDataService } from '../services/tournament-socket-data.service'
 
 @Component({
@@ -12,27 +13,31 @@ import { TournamentSocketDataService } from '../services/tournament-socket-data.
 })
 export class AppComponent implements AfterViewInit {
   title = 'mst-golfing';
-  
-  displayedColumns: string[] = GolfersKeys;
-  columnsToDisplay: string[] = this.displayedColumns.slice();
+  color = 'primary';
+  value = 50;
+  displayedColumns: string[] = GolfersColumns;
+  columnsToDisplay: string[] = ['First', 'Last', 'Score', 'TotalStrokes']
   dataSource: Golfer[] = [];
 
   addColumn(columnKey: string) {
-    // this.columnsToDisplay.push(this.displayedColumns);
+    this.columnsToDisplay.push(columnKey);
   }
 
   removeColumn() {
 
   }
 
+  resetTimerAnimation() { }
+
   // query for element
   @ViewChild(MatTable) table!: MatTable<Golfer>;
+  @ViewChild(MatProgressBarModule) progressBar!: MatProgressBarModule;
 
   constructor(private Golfer: TournamentSocketDataService) { }
 
   ngAfterViewInit(): void {
     this.Golfer.subscribe((update: Golfer) => {
-      console.log(update);
+      this.resetTimerAnimation();
       this.dataSource.push(update);
       this.table.renderRows();
     })

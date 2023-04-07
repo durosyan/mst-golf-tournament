@@ -75,7 +75,7 @@ export interface Golfer {
 }
 
 // Enumerate the keys of the interface to use as columns
-export const GolfersKeys: string[] = [
+export const GolfersColumns: string[] = [
     "MSTID",
     "Match",
     "First",

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table'
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -25,9 +26,10 @@ const config: SocketIoConfig = {
     FormsModule,
     SocketIoModule.forRoot(config),
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
