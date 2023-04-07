@@ -11,9 +11,12 @@ export class TournamentSocketDataService {
     this.DataObserver = this.socket.fromEvent('data-update');
   }
 
-  subscribe() {
+  subscribe(callback: Function) {
     this.DataObserver.subscribe({
-      next(update) { console.log(update) }
+      next(update) { 
+        // console.log(update)
+        callback(update)
+      }
     })
   }
 }

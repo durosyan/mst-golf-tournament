@@ -1,12 +1,13 @@
 export interface Golfer {
+// Some metadatas
     MSTID:                 number;  // just a random id
     Match:                 number;  // match number?
     First:                 string;  // First name
     Last:                  string;  // Last name
     TVName:                string;  // Nickname
-    Sex:                   string;  // 
-    Nationality:           string;  // 
-    SOD:                   null;    // "Stream output display?" always null
+    Sex:                   string; 
+    Nationality:           string; 
+    SOD:                   null;    // "Stream output display?" always null apparently
     Score:                 number;  
     Today:                 number;  // No frame of reference for this, is it the day of the month? day of the week?
     tournamentID:          number;
@@ -28,7 +29,7 @@ export interface Golfer {
     Eastern:               null;    // Can be null or 0 (from looking)
     Handicap:              number;
     SortPriority:          null;
-
+// This is where the strokes begin...
     Hole1Strokes:          number;
     Hole1STP:              number;
     Hole2Strokes:          number;
