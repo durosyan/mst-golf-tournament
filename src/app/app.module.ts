@@ -9,6 +9,7 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
+import { FooterControlComponent } from './components/footer-control/footer-control.component';
 
 
 const config: SocketIoConfig = {
@@ -18,7 +19,8 @@ const config: SocketIoConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterControlComponent
   ],
   imports: [
     BrowserModule,
